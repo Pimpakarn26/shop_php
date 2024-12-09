@@ -1,5 +1,5 @@
 <?php
-include 'db/controller.php';
+include 'database/controller.php';
 $products = getAllProducts();
 ?>
 

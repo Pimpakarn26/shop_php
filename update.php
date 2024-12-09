@@ -2,7 +2,7 @@
 include 'database/controller.php';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    addProduct($_POST['name'], $_POST['price'], $_POST['description']);
+    updateProduct($_POST['id'], $_POST['name'], $_POST['price'], $_POST['description']);
     header("Location: index.php");
     exit();
 }
