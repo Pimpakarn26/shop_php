@@ -17,30 +17,29 @@ if (isset($_GET['id'])) {
 }
 ?>
 
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>แก้ไขสินค้า</title>
+    <link rel="stylesheet" href="assets/styles.css">
 </head>
 <body>
     <h1>แก้ไขสินค้า</h1>
     <form action="updateProduct.php" method="post">
-    <input type="hidden" name="id" value="<?= htmlspecialchars($product['id']) ?>">
+        <input type="hidden" name="id" value="<?= htmlspecialchars($product['id']) ?>">
 
-    <label for="name">ชื่อสินค้า:</label>
-    <input type="text" id="name" name="name" value="<?= htmlspecialchars($product['name']) ?>" required><br><br>
+        <label for="name">ชื่อสินค้า:</label>
+        <input type="text" id="name" name="name" value="<?= htmlspecialchars($product['name']) ?>" required><br><br>
 
-    <label for="price">ราคา:</label>
-    <input type="number" id="price" name="price" value="<?= htmlspecialchars($product['price']) ?>" step="0.01" required><br><br>
+        <label for="price">ราคา:</label>
+        <input type="number" id="price" name="price" value="<?= htmlspecialchars($product['price']) ?>" step="0.01" required><br><br>
 
-    <label for="description">คำอธิบาย:</label>
-    <textarea id="description" name="description" rows="4" required><?= htmlspecialchars($product['description']) ?></textarea><br><br>
+        <label for="description">คำอธิบาย:</label>
+        <textarea id="description" name="description" rows="4" required><?= htmlspecialchars($product['description']) ?></textarea><br><br>
 
-    <input type="submit" value="อัปเดตสินค้า">
-</form>
-
+        <input type="submit" value="อัปเดตสินค้า">
+    </form>
 </body>
 </html>
